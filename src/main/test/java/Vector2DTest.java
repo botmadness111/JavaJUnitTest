@@ -1,25 +1,43 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 public class Vector2DTest {
+    private static Vector2D vector;
+
+    @BeforeClass
+    public static void createNewVector() {
+        System.out.println("Hello class!");
+        vector = new Vector2D();
+    }
+
+    @Before
+    public void beforeMethod(){
+        System.out.println("Hello method!");
+    }
+
+    @After
+    public void afterMethod(){
+        System.out.println("Goodbye method!");
+    }
+
+    @AfterClass
+    public static void afterClass(){
+        System.out.println("Goodbye class!");
+    }
 
     @Test
     public void newVectorShouldHaveZeroLength() {
-        Vector2D vector = new Vector2D();
 
         Assert.assertEquals(0, vector.getLength(), 1e-9);
     }
 
     @Test
     public void newVectorShouldHaveZeroX() {
-        Vector2D vector = new Vector2D();
 
         Assert.assertEquals(0, vector.getX(), 0);
     }
 
     @Test
     public void newVectorShouldHaveZeroY() {
-        Vector2D vector = new Vector2D();
 
         Assert.assertEquals(0, vector.getY(), 0);
     }
