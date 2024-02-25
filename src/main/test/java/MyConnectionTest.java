@@ -4,7 +4,7 @@ import java.sql.Connection;
 
 public class MyConnectionTest {
 
-    @Test(timeout = 1000)
+    @Test(timeout = 1000, expected = )
     public void connectionShouldBeFasterThanOneSecond(){
         MyConnection connection = new MyConnection();
         connection.doConnection();

@@ -5,6 +5,6 @@ public class MyConnection {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Connect!");
+        System.out.println("Connect!!!");
     }
 }
